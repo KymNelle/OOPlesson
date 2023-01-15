@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Animal.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #000000; background-color: #ffffff; font-family: Monospaced}
+pre {color: #000000; background-color: #ffffff; font-family: Monospaced}
+table {color: #000000; background-color: #e9e8e2; font-family: Monospaced}
+.ST0 {color: #969696; font-family: Monospaced; font-weight: bold}
+.ST1 {font-family: Monospaced; font-weight: bold}
+.comment {color: #969696}
+.ST2 {color: #009900}
+.ST3 {color: #009900; font-family: Monospaced; font-style: italic}
+.literal {color: #0000e6}
+.ST4 {color: #ce7b00; font-family: Monospaced; font-weight: bold}
+.string {color: #ce7b00}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">C:\Java\TheAnimalKingdom\src\theanimalkingdom\Animal.java</td></tr></table>
+<pre>
+<span class="literal">package</span> theanimalkingdom;
+
+<span class="comment">/**</span>
+<span class="comment"> * </span><span class="ST0">@author</span> <span class="comment">dmcshane784</span>
+ <span class="comment">*/</span>
+<span class="literal">public</span> <span class="literal">class</span> <span class="ST1">Animal</span> {
+    
+    <span class="comment">/* ATTRIBUTES */</span>
+    <span class="comment">// Instance/Object variables</span>
+    <span class="literal">private</span> String <span class="ST2">name</span>;
+    <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">length</span>;
+    <span class="literal">private</span> <span class="literal">boolean</span> <span class="ST2">furry</span>;
+    
+    <span class="comment">// All is not as it seems...these kinds of things are possible:</span>
+    <span class="literal">public</span> <span class="literal">static</span> <span class="literal">final</span> <span class="literal">boolean</span> <span class="ST3">DISCOVERED</span> = <span class="literal">true</span>;
+    
+    <span class="comment">/* METHODS */</span>
+    
+    <span class="comment">/* Constructor */</span>
+    <span class="comment">// Gives birth to a new object / Instantiates the class</span>
+    <span class="literal">public</span> <span class="ST1">Animal</span>(String name, <span class="literal">double</span> length, <span class="literal">boolean</span> furry) {
+        <span class="literal">this</span>.<span class="ST2">name</span> = name;
+        <span class="literal">this</span>.<span class="ST2">length</span> = length;
+        <span class="literal">this</span>.<span class="ST2">furry</span> = furry;
+    }
+    
+    <span class="comment">/* Getters */</span>
+    <span class="comment">// Allow read access to the encapsulated instance variables</span>
+    
+    <span class="literal">public</span> String <span class="ST1">getName</span>() {
+        <span class="literal">return</span> <span class="literal">this</span>.<span class="ST2">name</span>;
+    }
+    
+    <span class="literal">public</span> <span class="literal">double</span> <span class="ST1">getLength</span>() {
+        <span class="literal">return</span> <span class="literal">this</span>.<span class="ST2">length</span>;
+    }
+    
+    <span class="literal">public</span> <span class="literal">boolean</span> <span class="ST1">getFurry</span>() {
+        <span class="literal">return</span> <span class="literal">this</span>.<span class="ST2">furry</span>;
+    }
+    
+    <span class="comment">/* Setters */</span>
+    <span class="comment">// Allow write access to the encapsulated instance variables</span>
+    
+    <span class="literal">public</span> <span class="literal">void</span> <span class="ST1">setName</span>(String name) {
+        <span class="literal">this</span>.<span class="ST2">name</span> = name;
+    }
+    
+    <span class="literal">public</span> <span class="literal">void</span> <span class="ST1">setLength</span>(<span class="literal">double</span> length) {
+        <span class="literal">this</span>.<span class="ST2">length</span> = length;
+    }
+    
+    <span class="literal">public</span> <span class="literal">void</span> <span class="ST1">setFurry</span>(<span class="literal">boolean</span> furry) {
+        <span class="literal">this</span>.<span class="ST2">furry</span> = furry;
+    }
+    
+    
+    <span class="comment">/* Miscellaneous */</span>
+    @Override
+    <span class="literal">public</span> String <span class="ST1">toString</span>() {
+        <span class="literal">return</span> <span class="string">&quot;</span><span class="string">--- Animal ---</span><span class="ST4">\n</span><span class="string">&quot;</span>
+                + <span class="string">&quot;</span><span class="string">Name of species: </span><span class="string">&quot;</span> + <span class="ST2">name</span> + <span class="string">&quot;</span><span class="ST4">\n</span><span class="string">&quot;</span>
+                + <span class="string">&quot;</span><span class="string">Length: </span><span class="string">&quot;</span> + <span class="ST2">length</span> + <span class="string">&quot;</span><span class="string">cm</span><span class="ST4">\n</span><span class="string">&quot;</span>
+                + <span class="string">&quot;</span><span class="string">Furry?: </span><span class="string">&quot;</span> + <span class="ST2">furry</span> + <span class="string">&quot;</span><span class="ST4">\n</span><span class="string">&quot;</span>
+                + <span class="string">&quot;</span><span class="string">==============</span><span class="ST4">\n</span><span class="string">&quot;</span>;
+    }
+    
+    
+    <span class="literal">public</span> <span class="literal">void</span> <span class="ST1">printFactFile</span>() {
+        System.<span class="ST3">out</span>.println(toString());
+    }
+    
+    
+
+}
+</pre></body>
+</html>
